@@ -1,0 +1,51 @@
+<!--
+<form action="/login/" method="post">
+    <label for="your_name">user Id  </label>
+    <input id="your_name" type="text" name="user_id" value="{{ current_name }}"><br><br>
+    <label for="your_pass">Password</label>
+    <input id="your_pass" type="text" name="user_pass" value="{{ current_pass}}"><br><br>
+    <label for="submit"></label><br><br>
+    <input type="submit" id="submit" value="Submit">
+</form>-->
+<html>
+   <body>
+
+      <form name = "form" action = "{% url "login" %}"=
+         method = "POST" >
+
+      {% csrf_token %}
+
+         <div style = "max-width:470px;">
+            <center>
+               <input type = "text" style = "margin-left:20%;"
+                  placeholder = "Identifiant" name = "username" />
+            </center>
+         </div>
+
+         <br>
+
+         <div style = "max-width:470px;">
+            <center>
+               <input type = "password" style = "margin-left:20%;"
+                  placeholder = "password" name = "password" />
+            </center>
+         </div>
+
+         <br>
+
+         <div style = "max-width:470px;">
+            <center>
+
+               <button style = "border:0px; background-color:#4285F4; margin-top:8%;
+                  height:35px; width:80%;margin-left:19%;" type = "submit"
+                  value = "Login" >
+                  <strong>Login</strong>
+               </button>
+
+            </center>
+         </div>
+
+      </form>
+
+   </body>
+</html>
